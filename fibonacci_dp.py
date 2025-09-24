@@ -8,6 +8,16 @@ def fibonacci(n, fib={}):
     return result
 
 
+def fibonacci_series(n):
+    series = []
+    for i in range(n + 1):
+        series.append(fibonacci(i))
+    return series
+
+
 if __name__ == "__main__":
     n = int(input("Enter a number: "))
+    series = fibonacci_series(n)
+    print(f"Fibonacci series up to {n}: {series}")
     print(f"Fibonacci of {n} is {fibonacci(n)}")
+ 
